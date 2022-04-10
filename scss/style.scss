@@ -1,0 +1,91 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #303a52;
+  line-height: 1.6;
+  margin: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p {
+  color: #fff;
+}
+
+span {
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+// Navbar
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .desktop_nav {
+    display: none;
+  }
+}
+
+// Hero
+.hero {
+  margin-top: 5em;
+}
+
+// Projects
+section.projects {
+  margin-top: 2em;
+}
+// Contact
+.contact_paragraph {
+  display: none;
+}
+.contact_name {
+  margin-top: 2em;
+  input {
+    margin-top: 1em;
+  }
+}
+.contact_email {
+  margin-top: 1em;
+  input {
+    margin-top: 1em;
+  }
+}
+.contact_message {
+  margin-top: 1em;
+  textarea {
+    margin-top: 1em;
+  }
+}
+// Footer
