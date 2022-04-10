@@ -58,8 +58,12 @@ header {
 }
 
 // Hero
-.hero {
+section.hero {
   margin-top: 5em;
+
+  div.meet_nick {
+    margin-top: 1em;
+  }
 }
 
 // Projects
