@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
   margin: 1.5em;
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
 }
 
 h1,
@@ -22,6 +21,8 @@ h5,
 h6,
 label,
 p {
+  margin-top: 0;
+  padding-top: 0;
   color: #fff;
 }
 
@@ -44,6 +45,15 @@ img {
 input,
 textarea {
   width: 100%;
+  background: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  color: white;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 // Navbar
@@ -58,38 +68,51 @@ header {
 }
 
 // Hero
-section.hero {
-  margin-top: 5em;
-
-  div.meet_nick {
-    margin-top: 1em;
-  }
-}
 
 // Projects
-section.projects {
-  margin-top: 2em;
-}
+
+// About
+
 // Contact
-.contact_paragraph {
-  display: none;
-}
-.contact_name {
-  margin-top: 2em;
-  input {
-    margin-top: 1em;
+section.contact {
+  p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
   }
-}
-.contact_email {
-  margin-top: 1em;
-  input {
-    margin-top: 1em;
+  .contact_paragraph {
+    margin-top: 0.5em;
   }
-}
-.contact_message {
-  margin-top: 1em;
-  textarea {
+  .contact_name {
+    margin-top: 2em;
+    input {
+      margin-top: 1em;
+    }
+  }
+  .contact_email {
     margin-top: 1em;
+    input {
+      margin-top: 1em;
+    }
+  }
+  .contact_message {
+    margin-top: 1em;
+    textarea {
+      margin-top: 1em;
+    }
+  }
+  button {
+    margin-top: 0.5em;
+    padding: 0.25em;
+    width: 100%;
+    color: $primary-color;
+    font-size: 1.1rem;
   }
 }
 // Footer
+footer {
+  margin-top: 1em;
+  div.container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
