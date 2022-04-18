@@ -9,7 +9,7 @@
 body {
   background-color: #303a52;
   line-height: 1.6;
-  margin: 1.5em;
+
   font-family: 'Poppins', sans-serif;
 }
 
@@ -58,6 +58,7 @@ textarea {
 
 // Navbar
 header {
+  margin: 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,13 +69,40 @@ header {
 }
 
 // Hero
+section.hero {
+  margin-top: 5em;
+  margin: 1.5em;
+
+  div.meet_nick {
+    margin-top: 2em;
+    display: flex;
+  }
+}
 
 // Projects
+section.projects {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background-color: $tertiary-color;
 
+  div.projects_container {
+    margin-top: 1.5em;
+  }
+}
 // About
+section.about {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 
+  div.about_container {
+    margin-top: 1.5em;
+  }
+}
 // Contact
 section.contact {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
   p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
@@ -111,8 +139,9 @@ section.contact {
 // Footer
 footer {
   margin-top: 1em;
-  div.container {
-    display: flex;
-    justify-content: space-between;
+  div.footer {
+    a {
+      color: #fff;
+    }
   }
 }
