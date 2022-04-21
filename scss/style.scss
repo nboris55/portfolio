@@ -42,18 +42,13 @@ img {
   width: 100%;
 }
 
-input,
-textarea {
-  width: 100%;
-  background: none;
-  border-top-style: hidden;
-  border-left-style: hidden;
-  border-right-style: hidden;
-  color: white;
-}
-
-::placeholder {
-  color: #fff;
+h2::before {
+  content: '';
+  display: block;
+  background: $primary-color;
+  width: 1.5em;
+  height: 0.25em;
+  border-radius: 0.2em;
 }
 
 // Navbar
@@ -63,6 +58,10 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  h5 {
+    color: $primary-color;
+  }
+
   .desktop_nav {
     display: none;
   }
@@ -70,40 +69,61 @@ header {
 
 // Hero
 section.hero {
-  margin-top: 5em;
-  margin: 1.5em;
-
-  div.meet_nick {
-    margin-top: 2em;
-    display: flex;
-  }
+  padding: 1.5em;
+  margin-top: 15em;
 }
 
 // Projects
 section.projects {
+  padding-top: 1.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  margin-top: 15em;
   background-color: $tertiary-color;
 
   div.projects_container {
     margin-top: 1.5em;
   }
 }
+
 // About
 section.about {
+  padding-top: 1.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
 
   div.about_container {
     margin-top: 1.5em;
   }
+
+  // End of about section
 }
+
 // Contact
 section.contact {
+  padding-top: 1.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
 
-  p {
+  input,
+  textarea {
+    width: 100%;
+    background: $inputbg-color;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 1.2em;
+    transition: 0.3s;
+    color: #fff;
+  }
+
+  input:focus,
+  textarea:focus {
+    // box-shadow: 0 0 0.5em 0 $primary-color;
+    box-shadow: 0 0 0.5em 0 #212839;
+  }
+
+  p.contact_phrase {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
   }
@@ -128,6 +148,7 @@ section.contact {
       margin-top: 1em;
     }
   }
+
   button {
     margin-top: 0.5em;
     padding: 0.25em;
@@ -135,13 +156,47 @@ section.contact {
     color: $primary-color;
     font-size: 1.1rem;
   }
-}
-// Footer
-footer {
-  margin-top: 1em;
-  div.footer {
-    a {
+
+  .other_contact {
+    margin-top: 2em;
+    margin-bottom: 8em;
+    a,
+    p {
       color: #fff;
     }
+    .other_contact_email {
+      margin-top: 0.5em;
+    }
+  }
+
+  // End of contact section
+}
+
+// Mobile only navigation bar
+section.mobile_scroll_navigation {
+  //button styling
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  // initially hide the botton mobile nav bar
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background: $secondary-color;
+
+  div.mobile_scroll_navigation_bar {
+    display: flex;
+    justify-content: space-between;
   }
 }
