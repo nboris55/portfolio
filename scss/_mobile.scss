@@ -1,0 +1,39 @@
+@media (max-width: 35em) {
+  .mobile_nav_toggle {
+    position: absolute;
+    background: url(/public/icons/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 2rem;
+    right: 2rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+  }
+
+  .mobile_nav_toggle[aria-expanded='true'] {
+    background: url(/public/icons/icon-close.svg);
+    background-repeat: no-repeat;
+  }
+
+  .primary_navigation {
+    position: fixed;
+    z-index: 500;
+    inset: 0 0 0 45%;
+    background: $secondary-color;
+    border-top-left-radius: 5em;
+
+    padding: 10rem 2em;
+    transform: translateX(100%);
+    transition: 0.5s;
+
+    li {
+      padding-bottom: 1.5em;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  .primary_navigation[data-visible='true'] {
+    transform: translateX(0);
+  }
+}

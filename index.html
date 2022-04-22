@@ -16,25 +16,10 @@
   <body>
     <header>
       <h5>Nikita.Aleksandrovich</h5>
-   
-      <nav> 
-        <svg
-          width="56"
-          height="47"
-          viewBox="0 0 56 47"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="mobile_nav"
-        >
-         <path
-           d="M9.625 12.4844H46.375M9.625 35.9844H46.375H9.625ZM9.625 24.2344H46.375H9.625Z"
-           stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-         />
-         </svg>
-        <ul class="desktop_nav">
+      
+      <button aria-controls="primary-navigation" aria-expanded="false" class="mobile_nav_toggle"></button>
+      <nav>  
+        <ul id="primary-navigation" class="primary_navigation" data-visible="false">
           <li>Home</li>
           <li>Projects</li>
           <li>About</li>
@@ -47,11 +32,12 @@
       <section class="hero">
         <div class="headline">
           <h1>Hi/Hello/Privet/Zdravstvyite!</h1>
-          <!-- <h1>I build creative <span>U/I</span> while enhacing <span>U/X</span></h1> -->
-        </div>    
+          <h1>I build creative <span class="primary_color">U/I</span> while enhacing <span class="primary_color">U/X</span></h1>
+        </div>   
+        <img src="/public/screenshots/portfoliopic-removebg.png" alt=""> 
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <h2>Projects</h2>
         <div class="projects_container">
           <div class="project_1">
@@ -80,7 +66,7 @@
     </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <h2>About</h2>
 
         <div class="about_container">
@@ -92,7 +78,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <h2>Contact</h2>
 
         <p class="contact_phrase">Liked my content? Let's chat.</p>
@@ -132,10 +118,10 @@
 
         <div class="other_contact">      
           <div class="other_contact_phone">
-            <p><span>Phone:</span> 515-707-7818</p>
+            <p><span class="primary_color">Phone:</span> 515-707-7818</p>
           </div>
           <div class="other_contact_email">
-            <p><span>Email:</span> nborisenko55@gmail.com</p>
+            <p><span class="primary_color">Email:</span> nborisenko55@gmail.com</p>
           </div>
         </div>
       </section>
