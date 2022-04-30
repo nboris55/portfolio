@@ -98,6 +98,15 @@ section.about {
     margin-top: 1.5em;
   }
 
+  div.about_secondary {
+    h4 {
+      color: $primary-color;
+    }
+    .about_buttons {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
   // End of about section
 }
 
@@ -157,7 +166,7 @@ section.contact {
 
   .other_contact {
     margin-top: 2em;
-    margin-bottom: 8em;
+    margin-bottom: 3em;
     a,
     p {
       color: #fff;
