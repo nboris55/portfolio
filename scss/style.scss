@@ -61,6 +61,14 @@ h2::before {
   color: #84904b;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 // Navbar
 header {
   padding-top: 1.5em;
@@ -100,6 +108,16 @@ section.about {
 
   div.about_secondary {
     h4 {
+      color: $primary-color;
+    }
+
+    .hobbies,
+    .facts {
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+
+    .hobbies {
       color: $primary-color;
     }
     .about_toggle {

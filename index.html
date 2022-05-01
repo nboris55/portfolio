@@ -75,18 +75,22 @@
           <div class="about_secondary">
             <div class="about_toggle">
               <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="about-toggle">
                 <span class="slider round"></span>
                 <span class="labels" data-on="Fun Facts" data-off="Hobbies"></span>
               </label>
             </div>
-            <div class="hobbies_list">
-              <p>Moved to USA as a 9 year old.</p>
-              <p>Married.</p>
-              <p>Two dogs and a cat.</p>
-              <p>Snowboarding is good for the soul.</p>
-              <p>Enjoy biking, lifting weights and playing soccer.</p>
-              <p>Love learning new tech.</p>
+            <div id="facts" class="hidden" data-visible="false" aria-expanded="false">
+              <p class="facts">Moved to USA as a 9 year old.</p>
+              <p class="facts">Fluent in Russian</p>
+              <p class="facts">Married.</p>
+              <p class="facts">Two dogs and a cat.</p>
+            </div>
+            <div id="hobbies" data-visible="true" aria-expanded="true">
+              <p class="hobbies">Love learning new tech.</p>
+              <p class="hobbies">Snowboarding is good for the soul.</p>
+              <p class="hobbies">Enjoy biking, lifting weights and playing soccer.</p>
+              <p class="hobbies">Music</p>
             </div>
           </div>
         </div>

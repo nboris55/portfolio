@@ -5,6 +5,11 @@ const projectsSection = document.querySelector('#projects');
 const aboutSection = document.querySelector('#about');
 const contactSection = document.querySelector('#contact');
 
+//Facts vs Hobbies Toggle
+const aboutToggle = document.querySelector('#about-toggle');
+const facts = document.querySelector('#facts');
+const hobbies = document.querySelector('#hobbies');
+
 // Scroll Effects
 window.onscroll = function () {
   showMobileNav();
@@ -55,5 +60,28 @@ mobileNavToggle.addEventListener('click', function () {
   } else {
     primaryNav.setAttribute('data-visible', false);
     mobileNavToggle.setAttribute('aria-expanded', false);
+  }
+});
+
+//Show and hide Facts list vs Hobbies list
+aboutToggle.addEventListener('click', () => {
+  const visibility = document
+    .getElementById('facts')
+    .getAttribute('data-visible');
+
+  if (visibility === 'false') {
+    document.getElementById('facts').setAttribute('data-visible', true);
+    document.getElementById('facts').setAttribute('aria-expanded', true);
+    document.getElementById('hobbies').setAttribute('data-visible', false);
+    document.getElementById('hobbies').setAttribute('aria-expanded', false);
+    facts.style.display = 'block';
+    hobbies.style.display = 'none';
+  } else {
+    document.getElementById('hobbies').setAttribute('data-visible', true);
+    document.getElementById('hobbies').setAttribute('aria-expanded', true);
+    document.getElementById('facts').setAttribute('data-visible', false);
+    document.getElementById('facts').setAttribute('aria-expanded', false);
+    facts.style.display = 'none';
+    hobbies.style.display = 'block';
   }
 });
