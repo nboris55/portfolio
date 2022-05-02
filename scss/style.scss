@@ -104,6 +104,11 @@ section.projects {
 section.about {
   div.about_container {
     margin-top: 1.5em;
+
+    img {
+      margin-top: 2em;
+      border-radius: 1em;
+    }
   }
 
   div.about_secondary {
@@ -119,6 +124,9 @@ section.about {
 
     .hobbies {
       color: $primary-color;
+    }
+    .facts {
+      color: #ffffff;
     }
   }
   // End of about section
