@@ -85,17 +85,21 @@ header {
 
 // Hero
 section.hero {
-  margin-top: 10em;
+  margin-top: 5em;
   h4 {
     margin-bottom: 0.5em;
   }
   .name {
     margin-bottom: 0.5em;
-    text-decoration: underline;
-    text-decoration-color: $primary-color;
+  }
+  .name::after {
+    content: url(/public/icons/underline.svg);
   }
   .sub_headline {
     opacity: 0.8;
+  }
+  .hero_cartoon {
+    margin-top: 2em;
   }
 }
 // Projects
@@ -174,7 +178,6 @@ section.contact {
 
   input:focus,
   textarea:focus {
-    // box-shadow: 0 0 0.5em 0 $primary-color;
     box-shadow: 0 0 0.5em 0 #212839;
   }
 
@@ -214,7 +217,6 @@ section.contact {
 
   .other_contact {
     margin-top: 2em;
-    margin-bottom: 3em;
     a,
     p {
       color: #fff;
