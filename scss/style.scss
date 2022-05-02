@@ -58,7 +58,7 @@ h2::before {
 }
 
 .project_subtitle {
-  color: #84904b;
+  color: $primary-color;
 }
 
 .hidden {
@@ -84,10 +84,22 @@ header {
 }
 
 // Hero
-
+section.hero {
+  margin-top: 10em;
+  h4 {
+    margin-bottom: 0.5em;
+  }
+  .name {
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+    text-decoration-color: $primary-color;
+  }
+  .sub_headline {
+    opacity: 0.8;
+  }
+}
 // Projects
 section.projects {
-  margin-top: 15em;
   background-color: $tertiary-color;
 
   div.projects_container {
@@ -97,6 +109,18 @@ section.projects {
   .project_1_container img {
     margin-top: 1.5em;
     border-radius: 1em;
+  }
+
+  .project_2,
+  .project_3 {
+    margin-top: 1em;
+  }
+
+  img {
+    border: 2px solid $tertiary-color;
+    background: $tertiary-color;
+    padding: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
