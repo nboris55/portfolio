@@ -116,6 +116,13 @@ section.about {
       color: $primary-color;
     }
 
+    ul li::before {
+      content: '▹';
+      color: #fff;
+      font-size: 1.2em;
+      padding-right: 1em;
+    }
+
     .hobbies,
     .facts {
       margin-bottom: 0.5em;
