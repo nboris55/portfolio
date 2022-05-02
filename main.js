@@ -1,6 +1,5 @@
 const mobileNavToggle = document.querySelector('.mobile_nav_toggle');
 const primaryNav = document.querySelector('.primary_navigation');
-const mobileScrollNav = document.querySelector('.mobile_scroll_navigation');
 const projectsSection = document.querySelector('#projects');
 const aboutSection = document.querySelector('#about');
 const contactSection = document.querySelector('#contact');
@@ -14,17 +13,6 @@ const hobbies = document.querySelector('#hobbies');
 window.onscroll = function () {
   showMobileNav();
 };
-
-// Show mobile nav bar if scrolled down
-function showMobileNav() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mobileScrollNav.style.display = 'block';
-    primaryNav.style.display = 'none';
-  } else {
-    mobileScrollNav.style.display = 'none';
-    primaryNav.style.display = 'block';
-  }
-}
 
 // When the user clicks on the button a scroll occurs.
 // Scrolls to top
@@ -65,9 +53,7 @@ mobileNavToggle.addEventListener('click', function () {
 
 //Show and hide Facts list vs Hobbies list
 aboutToggle.addEventListener('click', () => {
-  const visibility = document
-    .getElementById('facts')
-    .getAttribute('data-visible');
+  const visibility = document.getElementById('facts').getAttribute('data-visible');
 
   if (visibility === 'false') {
     document.getElementById('facts').setAttribute('data-visible', true);
