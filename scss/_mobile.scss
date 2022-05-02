@@ -40,4 +40,95 @@
   p {
     font-size: 0.85rem;
   }
+
+  .about_toggle {
+    .switch {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 55px;
+      margin-bottom: 1em;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $tertiary-color;
+      transition: 1s;
+      border: 0.05rem solid $primary-color;
+    }
+
+    .slider::before {
+      position: absolute;
+      content: '';
+      bottom: 0px;
+      top: 10px;
+      background-color: #ffffff;
+      transition: 1s;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    input:checked + .slider::before {
+      transform: translateX(310px) rotateZ(45deg);
+      background: $primary-color;
+    }
+
+    .slider.round {
+      border-radius: 35px;
+    }
+
+    .slider.round::before {
+      width: 10%;
+      height: 40%;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      transform: rotateZ(-45deg);
+    }
+
+    .switch .labels {
+      position: absolute;
+      top: 12px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .switch .labels::after {
+      content: attr(data-off);
+      position: absolute;
+      right: 5px;
+      color: $primary-color;
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+      letter-spacing: 1px;
+    }
+
+    .switch .labels::before {
+      content: attr(data-on);
+      position: absolute;
+      left: 5px;
+      color: #ffffff;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      letter-spacing: 1px;
+    }
+
+    .switch input:checked ~ .labels::after {
+      opacity: 0;
+    }
+
+    .switch input:checked ~ .labels::before {
+      opacity: 1;
+    }
+  }
 }
