@@ -82,7 +82,7 @@ header {
 
 // Hero
 section.hero {
-  margin-top: 5em;
+  margin-top: em;
   h4 {
     margin-bottom: 0.5em;
   }
@@ -96,7 +96,8 @@ section.hero {
     opacity: 0.8;
   }
   .hero_cartoon {
-    margin-top: 2em;
+    margin: 0;
+    padding: 0;
   }
   h4 span {
     opacity: 0;
@@ -104,6 +105,15 @@ section.hero {
   }
   h4 span.animated_headline {
     opacity: 1;
+  }
+  #thought-bubble {
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    transform: translate3d(-50px, 70px, 0);
+  }
+  #skills-list {
+    transform: translate3d(130px, 130px, 0);
   }
 }
 // Projects
