@@ -113,7 +113,34 @@ section.hero {
     transform: translate3d(-50px, 70px, 0);
   }
   #skills-list {
-    transform: translate3d(130px, 130px, 0);
+    font-size: 2em;
+    color: $primary-color;
+    letter-spacing: 1px;
+    transform: translate3d(70px, -460px, 0);
+    span:before {
+      content: '';
+      animation: skills infinite 15s 0.5s;
+    }
+    @keyframes skills {
+      0% {
+        content: 'ReactJS';
+      }
+      20% {
+        content: 'NextJS';
+      }
+      40% {
+        content: 'MongoDB';
+      }
+      60% {
+        content: 'JavaScript';
+      }
+      80% {
+        content: 'Tailwind';
+      }
+      100% {
+        content: 'NodeJS';
+      }
+    }
   }
 }
 // Projects
