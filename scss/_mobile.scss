@@ -50,8 +50,13 @@
       margin-right: auto;
       margin-top: 2em;
       border-radius: 50%;
-      border: 2px solid $quarternary-color;
-      background: $quarternary-color;
+      background: linear-gradient(
+        45deg,
+        $primary-color,
+        $secondary-color,
+        $tertiary-color,
+        $quarternary-color
+      );
       padding: 0.5em;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }

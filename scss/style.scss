@@ -101,6 +101,13 @@ section.hero {
   .hero_cartoon {
     margin-top: 2em;
   }
+  h4 span {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  h4 span.animated_headline {
+    opacity: 1;
+  }
 }
 // Projects
 section.projects {
