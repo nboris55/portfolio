@@ -71,13 +71,10 @@ h2::before {
 
 // Navbar
 header {
-  padding-top: 1.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  margin: 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   h5 {
     color: $primary-color;
   }
@@ -117,7 +114,9 @@ section.projects {
     margin-top: 1.5em;
   }
 
-  .project_1_container img {
+  .project_1_container img,
+  .project_2_container img,
+  .project_3_container img {
     margin-top: 1.5em;
     border-radius: 1em;
   }
@@ -127,11 +126,40 @@ section.projects {
     margin-top: 1em;
   }
 
-  img {
+  img.project_pic {
     border: 2px solid $tertiary-color;
     background: $tertiary-color;
     padding: 0.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .project_img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .project_img span {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    background: none;
+    border: none;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    70% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
   }
 }
 
