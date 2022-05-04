@@ -66,25 +66,21 @@ window.onscroll = function () {
 // When the user clicks on the button a scroll occurs.
 // Scrolls to top
 function scrollToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Scrolls to portfolio
 function scrollToPortfolio() {
-  document.body.scrollTop; // For Safari
   projectsSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 }
 
 // Scrolls to about
 function scrollToAbout() {
-  document.body.scrollTop = 0; // For Safari
   aboutSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 }
 
 // Scrolls to contact
 function scrollToContact() {
-  document.body.scrollTop = 0; // For Safari
   contactSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 }
 
