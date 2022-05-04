@@ -67,21 +67,29 @@ window.onscroll = function () {
 // Scrolls to top
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  primaryNav.setAttribute('data-visible', false);
+  mobileNavToggle.setAttribute('aria-expanded', false);
 }
 
 // Scrolls to portfolio
 function scrollToPortfolio() {
   projectsSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  primaryNav.setAttribute('data-visible', false);
+  mobileNavToggle.setAttribute('aria-expanded', false);
 }
 
 // Scrolls to about
 function scrollToAbout() {
   aboutSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  primaryNav.setAttribute('data-visible', false);
+  mobileNavToggle.setAttribute('aria-expanded', false);
 }
 
 // Scrolls to contact
 function scrollToContact() {
   contactSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  primaryNav.setAttribute('data-visible', false);
+  mobileNavToggle.setAttribute('aria-expanded', false);
 }
 
 // Mobile menu toggle

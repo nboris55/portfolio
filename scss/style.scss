@@ -5,7 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -71,7 +70,7 @@ h2::before {
 
 // Navbar
 header {
-  margin: 1.5em;
+  padding: 4em 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,7 +92,9 @@ section.hero {
     content: url(/public/icons/underline.svg);
   }
   .sub_headline {
+    margin-top: 3em;
     opacity: 0.8;
+    font-size: 1rem;
   }
   .hero_cartoon {
     margin: 0;
