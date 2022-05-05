@@ -44,7 +44,8 @@ ul {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 h2::before {
@@ -177,26 +178,30 @@ section.projects {
     max-width: 400px;
   }
 
-  .project_img span {
+  span {
     position: absolute;
     top: 60%;
     left: 10%;
     background: none;
     border: none;
+  }
+
+  .pulse {
     animation-name: pulse;
     animation-duration: 1.5s;
-    animation-iteration-count: 5;
+    animation-iteration-count: 3;
     animation-timing-function: ease-in-out;
   }
+
   @keyframes pulse {
     0% {
-      transform: scale(0.9);
+      transform: translateY(0px);
     }
-    70% {
-      transform: scale(1);
+    50% {
+      transform: translateY(-10px);
     }
     100% {
-      transform: scale(0.9);
+      transform: translateY(0px);
     }
   }
 }

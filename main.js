@@ -58,11 +58,6 @@ aboutToggle.addEventListener('click', () => {
   }
 });
 
-// Scroll Effects
-window.onscroll = function () {
-  showMobileNav();
-};
-
 // When the user clicks on the button a scroll occurs.
 // Scrolls to top
 function scrollToTop() {
@@ -103,4 +98,36 @@ mobileNavToggle.addEventListener('click', function () {
     primaryNav.setAttribute('data-visible', false);
     mobileNavToggle.setAttribute('aria-expanded', false);
   }
+});
+
+// Observers
+
+// Add pulse to handpoint on Project images
+const images = document.querySelectorAll('div.project_img > img');
+const handpoint1 = document.querySelector('#project_1_point');
+const handpoint2 = document.querySelector('#project_2_point');
+const handpoint3 = document.querySelector('#project_3_point');
+
+const options = {
+  rootMargin: '0px',
+  threshold: 1,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    let target = entry.target.getAttribute('id');
+    if (!entry.isIntersecting) {
+      handpoint1.classList.remove('pulse');
+      handpoint2.classList.remove('pulse');
+      handpoint3.classList.remove('pulse');
+      return;
+    }
+    if (target == 'project_1_img') handpoint1.classList.add('pulse');
+    if (target == 'project_2_img') handpoint2.classList.add('pulse');
+    if (target == 'project_3_img') handpoint3.classList.add('pulse');
+  });
+}, options);
+
+images.forEach((image) => {
+  observer.observe(image);
 });
