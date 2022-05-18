@@ -1,10 +1,10 @@
 @import 'config';
-@import 'mobile';
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -45,7 +45,6 @@ ul {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 h2::before {
@@ -108,101 +107,21 @@ section.hero {
   h4 span.animated_headline {
     opacity: 1;
   }
-  #thought-bubble {
-    margin: 0;
-    padding: 0;
-    height: 250px;
-    transform: translate3d(-50px, 70px, 0);
-  }
-  #skills-list {
-    font-size: 2em;
-    color: $primary-color;
-    letter-spacing: 1px;
-    transform: translate3d(70px, -460px, 0);
-    span:before {
-      content: '';
-      animation: skills infinite 15s 0.5s;
-    }
-    @keyframes skills {
-      0% {
-        content: 'ReactJS';
-      }
-      20% {
-        content: 'NextJS';
-      }
-      40% {
-        content: 'MongoDB';
-      }
-      60% {
-        content: 'JavaScript';
-      }
-      80% {
-        content: 'Tailwind';
-      }
-      100% {
-        content: 'NodeJS';
-      }
-    }
-  }
 }
 // Projects
 section.projects {
   background-color: $tertiary-color;
-
-  div.projects_container {
-    margin-top: 1.5em;
+  .featured_title {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: block;
   }
-
-  .project_1_container img,
-  .project_2_container img,
-  .project_3_container img {
-    margin-top: 1.5em;
-    border-radius: 1em;
-  }
-
-  .project_2,
-  .project_3 {
-    margin-top: 1em;
-  }
-
-  img.project_pic {
-    border: 2px solid $tertiary-color;
-    background: $tertiary-color;
-    padding: 0.5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .project_img {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  span {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    background: none;
-    border: none;
-  }
-
-  .pulse {
-    animation-name: pulse;
-    animation-duration: 1.5s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-in-out;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
+  .featured_desc {
+    margin-bottom: 2em;
+    color: #f7f7f7;
+    font-size: 0.9em;
+    line-height: 1.8;
   }
 }
 
@@ -235,6 +154,98 @@ section.about {
     }
     .facts {
       color: #ffffff;
+    }
+  }
+
+  .about_toggle {
+    .switch {
+      overflow-y: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 55px;
+      margin-bottom: 1em;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $tertiary-color;
+      transition: 1s;
+      border: 0.05rem solid $primary-color;
+    }
+
+    .slider::before {
+      position: absolute;
+      content: '';
+      bottom: 0px;
+      top: 10px;
+      background-color: #ffffff;
+      transition: 1s;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    input:checked + .slider::before {
+      transform: translateX(310px) rotateZ(45deg);
+      background: $primary-color;
+    }
+
+    .slider.round {
+      border-radius: 35px;
+    }
+
+    .slider.round::before {
+      width: 10%;
+      height: 40%;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      transform: rotateZ(-45deg);
+    }
+
+    .switch .labels {
+      position: absolute;
+      top: 12px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .switch .labels::after {
+      content: attr(data-off);
+      position: absolute;
+      right: 5px;
+      color: $primary-color;
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+      letter-spacing: 1px;
+    }
+
+    .switch .labels::before {
+      content: attr(data-on);
+      position: absolute;
+      left: 5px;
+      color: #ffffff;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      letter-spacing: 1px;
+    }
+
+    .switch input:checked ~ .labels::after {
+      opacity: 0;
+    }
+
+    .switch input:checked ~ .labels::before {
+      opacity: 1;
     }
   }
   // End of about section
