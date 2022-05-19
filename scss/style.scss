@@ -120,8 +120,23 @@ section.projects {
   .featured_desc {
     margin-bottom: 2em;
     color: #f7f7f7;
-    font-size: 0.9em;
+    font-size: 0.85rem;
     line-height: 1.8;
+  }
+
+  .featured_info {
+    display: grid;
+    grid-template-columns: 40% auto;
+    margin-bottom: 2em;
+    ul li {
+      font-size: 0.75rem;
+      color: #f7f7f7;
+    }
+    ul li::before {
+      content: '▹';
+      color: #fff;
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -131,7 +146,13 @@ section.about {
     margin-top: 1.5em;
   }
 
+  p {
+    font-size: 0.85rem;
+  }
+
   div.about_secondary {
+    margin-bottom: 2em;
+
     h4 {
       color: $primary-color;
     }
@@ -140,13 +161,14 @@ section.about {
       content: '▹';
       color: #fff;
       font-size: 1.2em;
-      padding-right: 1em;
+      padding-right: 0.5em;
     }
 
     .hobbies,
     .facts {
       margin-bottom: 0.5em;
       font-weight: bold;
+      font-size: 0.85rem;
     }
 
     .hobbies {
