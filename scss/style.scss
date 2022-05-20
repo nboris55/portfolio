@@ -69,19 +69,87 @@ h2::before {
 }
 
 // Navbar
-header {
-  padding: 4em 2em;
+
+div.nav_container {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  h5 {
+
+  h1 {
     color: $primary-color;
+    font-size: 1rem;
   }
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1em 2em;
+  background-color: #212839;
+  border-bottom: 3px solid $primary-color;
+}
+.mobile_nav {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile_nav span {
+  display: block;
+  width: 33px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  z-index: 1;
+
+  transform-origin: 0 0;
+
+  transition: 0.4s;
+}
+
+.mobile_nav.is-active span:nth-child(1) {
+  transform: translate(0px, 0px) rotate(40deg);
+}
+
+.mobile_nav.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.mobile_nav.is-active span:nth-child(3) {
+  transform: translate(0px, 5px) rotate(-45deg);
+}
+
+.primary_nav {
+  display: none;
+}
+
+// header {
+//   padding: 4em 2em;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   h5 {
+//     color: $primary-color;
+//   }
+// }
+
 // Hero
 section.hero {
-  margin-top: em;
+  margin-top: 7em;
   h4 {
     margin-bottom: 0.5em;
   }
@@ -111,6 +179,11 @@ section.hero {
 // Projects
 section.projects {
   background-color: $tertiary-color;
+
+  img {
+    border-radius: 0.5em;
+  }
+
   .featured_title {
     color: $primary-color;
     font-weight: bold;

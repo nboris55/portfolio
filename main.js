@@ -1,8 +1,12 @@
-const mobileNavToggle = document.querySelector('.mobile_nav_toggle');
+const mobileNavToggle = document.querySelector('.mobile_nav');
 const primaryNav = document.querySelector('.primary_navigation');
 const projectsSection = document.querySelector('#projects');
 const aboutSection = document.querySelector('#about');
 const contactSection = document.querySelector('#contact');
+
+mobileNavToggle.addEventListener('click', function () {
+  this.classList.toggle('is-active');
+});
 
 // Hello animation
 const animatedHeadline = document.querySelector('#animated-headline');
