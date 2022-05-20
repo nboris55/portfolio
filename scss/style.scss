@@ -60,12 +60,8 @@ h2::before {
   color: $primary-color;
 }
 
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
+.blur {
+  filter: blur(5px) brightness(0.7);
 }
 
 // Navbar
@@ -93,6 +89,7 @@ nav {
   background-color: #212839;
   border-bottom: 3px solid $primary-color;
 }
+
 .mobile_nav {
   display: block;
   position: relative;
@@ -114,9 +111,7 @@ nav {
   background-color: #f7f7f7;
   border-radius: 6px;
   z-index: 1;
-
   transform-origin: 0 0;
-
   transition: 0.4s;
 }
 
@@ -133,19 +128,47 @@ nav {
   transform: translate(0px, 5px) rotate(-45deg);
 }
 
-.primary_nav {
-  display: none;
+// .primary_nav {
+//   display: none;
+//   flex: 1 1 0%;
+//   justify-content: flex-end;
+//   margin: 0 -1em;
+// }
+
+.primary_nav li {
+  color: #f7f7f7;
+  margin: 0 1em;
+  transition: 0.4s;
+  padding: 0.5em 0.8em;
 }
 
-// header {
-//   padding: 4em 2em;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   h5 {
-//     color: $primary-color;
-//   }
-// }
+@media (max-width: 767px) {
+  .primary_nav {
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: 10em 2em;
+    background-color: $quarternary-color;
+    backdrop-filter: blur(1rem);
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+  }
+
+  .primary_nav[data-visible='true'] {
+    transform: translateX(0%);
+  }
+}
+
+// Nav Media
+@media only screen and (min-width: 768px) {
+  .mobile_nav {
+    display: none;
+  }
+
+  .primary_nav {
+    display: flex;
+  }
+}
 
 // Hero
 section.hero {

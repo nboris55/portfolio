@@ -13,43 +13,28 @@
     />
     <link rel="stylesheet" href="/dist/css/style.min.css" />
   </head>
+  <nav data-visible="true">
+    <div class="nav_container">
+       <h1>Nikita.Aleksandrovich</h1>
+
+    <ul id="primary-navigation" class="primary_nav" data-visible="false">
+      <li onclick="scrollToTop()">Home</li>
+      <li onclick="scrollToPortfolio()">Projects</li>
+      <li onclick="scrollToAbout()">About</li>
+      <li onclick="scrollToContact()">Contact</li>
+    </ul>
+
+    <button aria-controls="primary-navigation" aria-expanded="false" class="mobile_nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+   
+  </nav>
   <body>
-
-    <nav>
-      <div class="nav_container">
-         <h1>Nikita.Aleksandrovich</h1>
-
-      <ul id="primary-navigation" class="primary_nav" data-visible="false">
-        <li onclick="scrollToTop()">Home</li>
-        <li onclick="scrollToPortfolio()">Projects</li>
-        <li onclick="scrollToAbout()">About</li>
-        <li onclick="scrollToContact()">Contact</li>
-      </ul>
-
-      <button class="mobile_nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      </div>
-     
-    </nav>
-    <!-- <header>
-      <h5 class="logo">Nikita.Aleksandrovich</h5>
-      
-      <button aria-controls="primary-navigation" aria-expanded="false" class="mobile_nav_toggle"></button>
-      <nav>  
-        <ul id="primary-navigation" class="primary_navigation" data-visible="false">
-          <li onclick="scrollToTop()">Home</li>
-          <li onclick="scrollToPortfolio()">Projects</li>
-          <li onclick="scrollToAbout()">About</li>
-          <li onclick="scrollToContact()">Contact</li>
-        </ul>
-      </nav>
-    </header> -->
-
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="headline">
           <h4 id="animated-headline">Hi/Hello/Privet/Zdravstvyite!</h4>
           <h1 class="name">My name is <span class="primary_color">Nick Borisenko.</span></h1>

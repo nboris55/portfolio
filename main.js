@@ -1,12 +1,11 @@
 const mobileNavToggle = document.querySelector('.mobile_nav');
-const primaryNav = document.querySelector('.primary_navigation');
+const primaryNav = document.querySelector('.primary_nav');
+
+// Section selectors
+const heroSection = document.querySelector('#hero');
 const projectsSection = document.querySelector('#projects');
 const aboutSection = document.querySelector('#about');
 const contactSection = document.querySelector('#contact');
-
-mobileNavToggle.addEventListener('click', function () {
-  this.classList.toggle('is-active');
-});
 
 // Hello animation
 const animatedHeadline = document.querySelector('#animated-headline');
@@ -75,6 +74,9 @@ function scrollToPortfolio() {
   projectsSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
+  mobileNavToggle.classList.toggle('is-active');
+
+  toggleBlur();
 }
 
 // Scrolls to about
@@ -82,6 +84,9 @@ function scrollToAbout() {
   aboutSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
+  mobileNavToggle.classList.toggle('is-active');
+
+  toggleBlur();
 }
 
 // Scrolls to contact
@@ -89,10 +94,17 @@ function scrollToContact() {
   contactSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
+  mobileNavToggle.classList.toggle('is-active');
+
+  toggleBlur();
 }
 
 // Mobile menu toggle
 mobileNavToggle.addEventListener('click', function () {
+  this.classList.toggle('is-active');
+
+  toggleBlur();
+
   const visibility = primaryNav.getAttribute('data-visible');
 
   if (visibility === 'false') {
@@ -103,6 +115,14 @@ mobileNavToggle.addEventListener('click', function () {
     mobileNavToggle.setAttribute('aria-expanded', false);
   }
 });
+
+// Toggle Section Blur
+function toggleBlur() {
+  heroSection.classList.toggle('blur');
+  projectsSection.classList.toggle('blur');
+  aboutSection.classList.toggle('blur');
+  contactSection.classList.toggle('blur');
+}
 
 // Observers
 
