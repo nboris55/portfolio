@@ -7,33 +7,28 @@ const projectsSection = document.querySelector('#projects');
 const aboutSection = document.querySelector('#about');
 const contactSection = document.querySelector('#contact');
 
-// Hello animation
-const animatedHeadline = document.querySelector('#animated-headline');
-const animatedStr = animatedHeadline.textContent;
-const splitHeadline = animatedStr.split('');
-animatedHeadline.textContent = '';
-let numb = 1;
-for (i = 0; i < splitHeadline.length; i++) {
-  animatedHeadline.innerHTML += `<span style="--i:${numb}">` + splitHeadline[i] + '</span>';
-  numb++;
-}
-let char = 0;
-let timer = setInterval(onTick, 50);
+//Project carousel selectors
+const carouselButtons = document.querySelectorAll('[data-carousel-button]');
+carouselButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const offset = button.dataset.carouselButton == 'next' ? 1 : -1;
+    const slides = button.closest('[data-carousel]').querySelector('[data-slides]');
 
-function onTick() {
-  const span = animatedHeadline.querySelectorAll('span')[char];
-  span.classList.add('animated_headline');
-  char++;
-  if (char === splitHeadline.length) {
-    complete();
-    return;
-  }
-}
+    const activeSlide = slides.querySelector('[data-active]');
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}
+    if (newIndex < 0) {
+      newIndex = slides.children.length - 1;
+    }
+
+    if (newIndex >= slides.children.length) {
+      newIndex = 0;
+    }
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
 
 // Facts vs Hobbies Toggle
 const aboutToggle = document.querySelector('#about-toggle');
@@ -123,35 +118,3 @@ function toggleBlur() {
   aboutSection.classList.toggle('blur');
   contactSection.classList.toggle('blur');
 }
-
-// Observers
-
-// Add pulse to handpoint on Project images
-const images = document.querySelectorAll('div.project_img > img');
-const handpoint1 = document.querySelector('#project_1_point');
-const handpoint2 = document.querySelector('#project_2_point');
-const handpoint3 = document.querySelector('#project_3_point');
-
-const options = {
-  rootMargin: '0px',
-  threshold: 1,
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    let target = entry.target.getAttribute('id');
-    if (!entry.isIntersecting) {
-      handpoint1.classList.remove('pulse');
-      handpoint2.classList.remove('pulse');
-      handpoint3.classList.remove('pulse');
-      return;
-    }
-    if (target == 'project_1_img') handpoint1.classList.add('pulse');
-    if (target == 'project_2_img') handpoint2.classList.add('pulse');
-    if (target == 'project_3_img') handpoint3.classList.add('pulse');
-  });
-}, options);
-
-images.forEach((image) => {
-  observer.observe(image);
-});

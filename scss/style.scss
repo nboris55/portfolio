@@ -242,6 +242,60 @@ section.projects {
       font-size: 1.2em;
     }
   }
+
+  .carousel {
+    position: relative;
+    height: 25vh;
+  }
+
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+
+  .slide[data-active] {
+    opacity: 1;
+    transition-delay: 0ms;
+  }
+
+  .slide > img {
+    display: block;
+  }
+
+  .carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: #fff;
+  }
+
+  .carousel-button.prev {
+    left: 0.5rem;
+  }
+
+  .carousel-button.next {
+    right: 0.5rem;
+  }
 }
 
 // About
@@ -355,7 +409,7 @@ section.about {
     .switch .labels::after {
       content: attr(data-off);
       position: absolute;
-      right: 5px;
+      right: 10px;
       color: $primary-color;
       opacity: 1;
       transition: all 0.4s ease-in-out;
@@ -365,7 +419,7 @@ section.about {
     .switch .labels::before {
       content: attr(data-on);
       position: absolute;
-      left: 5px;
+      left: 10px;
       color: #ffffff;
       opacity: 0;
       transition: all 0.4s ease-in-out;
