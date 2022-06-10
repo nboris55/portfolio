@@ -64,6 +64,10 @@ h2::before {
   filter: blur(5px) brightness(0.7);
 }
 
+.hidden {
+  display: none;
+}
+
 // Navbar
 
 div.nav_container {
@@ -142,7 +146,7 @@ nav {
   padding: 0.5em 3em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .primary_nav {
     position: fixed;
     inset: 0 0 0 30%;
@@ -279,6 +283,12 @@ section.about {
     }
   }
 
+  .profile_picture {
+    border-radius: 1em;
+    margin-left: 2em;
+    width: 80%;
+  }
+
   .about_toggle {
     .switch {
       overflow-y: hidden;
@@ -375,6 +385,7 @@ section.about {
 
 // Contact
 section.contact {
+  padding: 0 2em 2em;
   input,
   textarea {
     width: 100%;
