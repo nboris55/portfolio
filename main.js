@@ -13,8 +13,11 @@ carouselButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const offset = button.dataset.carouselButton == 'next' ? 1 : -1;
     const slides = button.closest('[data-carousel]').querySelector('[data-slides]');
+    const radio = button.closest('[data-carousel]').querySelector('[data-radio]');
 
     const activeSlide = slides.querySelector('[data-active]');
+    const activeRadio = radio.querySelector('[data-active]');
+
     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
     if (newIndex < 0) {
@@ -26,7 +29,9 @@ carouselButtons.forEach((button) => {
     }
 
     slides.children[newIndex].dataset.active = true;
+    radio.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
   });
 });
 

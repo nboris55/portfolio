@@ -248,6 +248,10 @@ section.projects {
     height: 25vh;
   }
 
+  .carousel input {
+    display: none;
+  }
+
   .carousel > ul {
     margin: 0;
     padding: 0;
@@ -257,8 +261,8 @@ section.projects {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: 400ms opacity ease-in-out;
-    transition-delay: 400ms;
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
   }
 
   .slide[data-active] {
@@ -295,6 +299,33 @@ section.projects {
 
   .carousel-button.next {
     right: 0.5rem;
+  }
+
+  .carouselNav {
+    position: absolute;
+    width: 348px;
+    margin-top: 13em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .manual-btn:hover {
+    cursor: pointer;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 1.5em;
+  }
+
+  .manual-btn[data-active] {
+    background: #fff;
+    transition-delay: 250ms;
   }
 }
 
