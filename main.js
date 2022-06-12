@@ -35,6 +35,69 @@ carouselButtons.forEach((button) => {
   });
 });
 
+function switchSlide(index) {
+  const slides = document.querySelector('[data-slides]');
+  const radio = document.querySelector('[data-radio]');
+  const activeSlide = slides.querySelector('[data-active]');
+  const activeRadio = radio.querySelector('[data-active]');
+
+  if (index == 'radio0') {
+    slides.children[0].dataset.active = true;
+    radio.children[0].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio0') {
+    slides.children[0].dataset.active = true;
+    radio.children[0].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio1') {
+    slides.children[1].dataset.active = true;
+    radio.children[1].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio2') {
+    slides.children[2].dataset.active = true;
+    radio.children[2].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio3') {
+    slides.children[3].dataset.active = true;
+    radio.children[3].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio4') {
+    slides.children[4].dataset.active = true;
+    radio.children[4].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+
+  if (index == 'radio5') {
+    slides.children[5].dataset.active = true;
+    radio.children[5].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeRadio.dataset.active;
+  }
+}
+
+const radioButtons = document.querySelectorAll('[data-carousel-radio]');
+radioButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    reply();
+  });
+});
+
 // Facts vs Hobbies Toggle
 const aboutToggle = document.querySelector('#about-toggle');
 const facts = document.querySelector('#facts');
