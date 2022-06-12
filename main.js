@@ -186,3 +186,26 @@ function toggleBlur() {
   aboutSection.classList.toggle('blur');
   contactSection.classList.toggle('blur');
 }
+
+window.onscroll = function (e) {
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  const nav = document.querySelector('nav');
+
+  const mSpan1 = document.querySelector('.mobile_span1');
+  const mSpan2 = document.querySelector('.mobile_span2');
+  const mSpan3 = document.querySelector('.mobile_span3');
+
+  if (scrollY <= this.lastScroll) {
+    mSpan1.style.transition = 'all .3s';
+    mSpan2.style.transition = 'all .3s';
+    mSpan3.style.transition = 'all .3s';
+    nav.style.visibility = 'visible';
+  } else {
+    mSpan1.style.transition = 'all 0s';
+    mSpan2.style.transition = 'all 0s';
+    mSpan3.style.transition = 'all 0s';
+    nav.style.visibility = 'hidden';
+  }
+
+  this.lastScroll = scrollY;
+};
