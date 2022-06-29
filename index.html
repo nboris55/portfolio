@@ -18,10 +18,10 @@
        <h1>Nikita.Aleksandrovich</h1>
 
     <ul id="primary-navigation" class="primary_nav" data-visible="false">
-      <li onclick="scrollToTop()">Home</li>
-      <li onclick="scrollToPortfolio()">Projects</li>
-      <li onclick="scrollToAbout()">About</li>
-      <li onclick="scrollToContact()">Contact</li>
+      <li onclick="scrollToTop()" id="home_nav">Home</li>
+      <li onclick="scrollToPortfolio()" id="projects_nav">Projects</li>
+      <li onclick="scrollToAbout()" id="about_nav">About</li>
+      <li onclick="scrollToContact()" id="contact_nav">Contact</li>
     </ul>
 
     <button aria-controls="primary-navigation" aria-expanded="false" class="mobile_nav">
@@ -36,9 +36,11 @@
     <main>
       <section class="hero" id="hero">
         <div class="headline">
-          <h4 id="animated-headline">Hi/Hello/Privet/Zdravstvyite!</h4>
+          <h4 id="hello-text">Hi/Hello/Privet/Zdravstvyite!</h4>
           <h1 class="name">My name is <span class="primary_color">Nick Borisenko.</span></h1>
-          <h1 class="sub_headline">I build creative <span class="primary_color">U/I</span> while enhacing <span class="primary_color">U/X.</span></h1>
+          <h1 class="sub_headline_mobile">I build creative <span class="primary_color">U/I</span> while enhacing <span class="primary_color">U/X.</span></h1>
+          <h1 class="sub_headline">I build creative <span class="primary_color">User Interfaces</span> while enhacing 
+            <span class="primary_color">User Experience.</span></h1>
         </div>
         <div class="hero_cartoon">
     
@@ -68,6 +70,7 @@
                     <li>SWR</li>
                   </ul>
               </div>
+              </div>
               <div class="carousel" data-carousel>
                 <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
                 <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
@@ -95,7 +98,6 @@
                   <label for="radio4" class="manual-btn"></label>
                   <label for="radio5" class="manual-btn"></label>
                 </div>
-              </div>
             </div>
           </div>
 
@@ -107,15 +109,14 @@
         <h2>About</h2>
 
         <div class="about_container">
-          <p>
+          <div class="about_inner">
+             <p>
             Hey, I'm <span class="primary_color">Nick</span>! I'm a software engineer hailing from Stavropol, Russia 
             and currently living in Iowa, USA. From an early age I was curious about technology, 
-              puzzles and building things.
+            puzzles and building things. 
+            Today I get to design interactive user interfaces for insurance agents at <span class="primary_color">EMC Insurance</span>.
           </p>
-          <br>
-          <p>Today I get to design interactive user interfaces for insurance agents at <span class="primary_color">EMC Insurance</span>.</p>
           <p>Thanks for checking out my page.</p>
-          <br>
 
           <div class="about_secondary">
             <div class="about_toggle">
@@ -144,10 +145,13 @@
               </ul>
             </div>
           </div>
+          </div>
+         
+          <div class="wrapper">
+            <img src="/public/headshot.jpg" alt="profile picture" class="profile_picture wrapper" id="profile-picture"> 
+          </div>
         </div>
-        <div class="wrapper">
-          <img src="/public/headshot.jpg" alt="profile picture" class="profile_picture wrapper" id="profile-picture"> 
-        </div>
+      
         
 
         <!-- <img src="/public/portfoliopic.jpg" alt="profile picture" class="profile_picture" id="profile-picture">  -->

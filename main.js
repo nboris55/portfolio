@@ -48,13 +48,6 @@ function switchSlide(index) {
     delete activeRadio.dataset.active;
   }
 
-  if (index == 'radio0') {
-    slides.children[0].dataset.active = true;
-    radio.children[0].dataset.active = true;
-    delete activeSlide.dataset.active;
-    delete activeRadio.dataset.active;
-  }
-
   if (index == 'radio1') {
     slides.children[1].dataset.active = true;
     radio.children[1].dataset.active = true;
@@ -130,6 +123,8 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
+
+  toggleBlur();
 }
 
 // Scrolls to portfolio
@@ -195,15 +190,32 @@ window.onscroll = function (e) {
   const mSpan2 = document.querySelector('.mobile_span2');
   const mSpan3 = document.querySelector('.mobile_span3');
 
+  const home = document.querySelector('#home_nav');
+  const projects = document.querySelector('#projects_nav');
+  const about = document.querySelector('#about_nav');
+  const contact = document.querySelector('#contact_nav');
+
   if (scrollY <= this.lastScroll) {
     mSpan1.style.transition = 'all .3s';
     mSpan2.style.transition = 'all .3s';
     mSpan3.style.transition = 'all .3s';
+
+    home.style.transition = 'all .3s';
+    projects.style.transition = 'all .3s';
+    about.style.transition = 'all .3s';
+    contact.style.transition = 'all .3s';
+
     nav.style.visibility = 'visible';
   } else {
     mSpan1.style.transition = 'all 0s';
     mSpan2.style.transition = 'all 0s';
     mSpan3.style.transition = 'all 0s';
+
+    home.style.transition = 'all .0s';
+    projects.style.transition = 'all .0s';
+    about.style.transition = 'all .0s';
+    contact.style.transition = 'all .0s';
+
     nav.style.visibility = 'hidden';
   }
 
