@@ -394,6 +394,11 @@ section.projects {
       object-fit: cover;
     }
   }
+  @media only screen and (min-width: 1600px) {
+    .carouselNav {
+      margin-top: 20em;
+    }
+  }
 }
 
 // About
@@ -404,6 +409,7 @@ section.about {
 
   p {
     font-size: 0.85rem;
+    line-height: 1.8;
   }
 
   div.about_secondary {
@@ -533,24 +539,26 @@ section.about {
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    .about_toggle {
-      display: none;
-    }
-  }
-
   @media only screen and (min-width: 900px) {
     .about_container {
       display: grid;
       grid-template-columns: 60% auto;
     }
-    .about_secondary {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 2em;
-    }
-    #facts {
-      display: block;
+    .about_toggle {
+      .switch {
+        overflow-y: hidden;
+        position: relative;
+        display: block;
+        width: 80%;
+        height: 55px;
+        margin-bottom: 1em;
+      }
+      .switch:hover {
+        cursor: pointer;
+      }
+      input:checked + .slider::before {
+        transform: translateX(380px) rotateZ(45deg);
+      }
     }
   }
   // End of about section
