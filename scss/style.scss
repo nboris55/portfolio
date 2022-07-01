@@ -7,18 +7,18 @@
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 0.4em;
-}
+// ::-webkit-scrollbar {
+//   width: 0.4em;
+// }
 
-::-webkit-scrollbar-track {
-  background: none;
-}
+// ::-webkit-scrollbar-track {
+//   background: none;
+// }
 
-::-webkit-scrollbar-thumb {
-  background: #212839;
-  border-radius: 100vw;
-}
+// ::-webkit-scrollbar-thumb {
+//   background: #212839;
+//   border-radius: 100vw;
+// }
 
 body {
   min-height: 100vh;
@@ -118,7 +118,6 @@ nav {
   z-index: 1000;
   padding: 1em 2em;
   background-color: rgba(48, 58, 82, 0.85);
-  backdrop-filter: blur(0.5rem);
 }
 
 .mobile_nav {
@@ -178,8 +177,6 @@ nav {
     inset: 0 0 0 30%;
     padding-top: 10em;
     background-color: $quarternary-color;
-    backdrop-filter: blur(1rem);
-
     transform: translateX(100%);
     transition: transform 0.4s ease-in;
   }
