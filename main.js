@@ -137,6 +137,14 @@ function scrollToPortfolio() {
   toggleBlur();
 }
 
+// Scrolls to portfolio call to action button
+function scrollToProjects() {
+  projectsSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  primaryNav.setAttribute('data-visible', false);
+  mobileNavToggle.setAttribute('aria-expanded', false);
+  mobileNavToggle.classList.toggle('is-active');
+}
+
 // Scrolls to about
 function scrollToAbout() {
   aboutSection.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
