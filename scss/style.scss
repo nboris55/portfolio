@@ -7,6 +7,19 @@
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212839;
+  border-radius: 100vw;
+}
+
 body {
   min-height: 100vh;
   background-color: #303a52;
@@ -104,7 +117,8 @@ nav {
   right: 0;
   z-index: 1000;
   padding: 1em 2em;
-  background-color: #212839;
+  background-color: rgba(48, 58, 82, 0.85);
+  backdrop-filter: blur(0.5rem);
 }
 
 .mobile_nav {
@@ -617,6 +631,13 @@ section.about {
       }
     }
   }
+  @media only screen and (min-width: 1600px) {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(424px) rotateZ(45deg);
+      }
+    }
+  }
   // End of about section
 }
 
@@ -671,6 +692,12 @@ section.contact {
     width: 100%;
     color: $primary-color;
     font-size: 1.2rem;
+  }
+
+  @media only screen and (min-width: 900px) {
+    button {
+      width: 20%;
+    }
   }
 
   .other_contact {
