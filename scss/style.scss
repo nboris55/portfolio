@@ -335,7 +335,7 @@ section.projects {
 
   .carouselNav {
     position: relative;
-    margin-top: 13em;
+    margin-top: 12em;
     display: flex;
     justify-content: center;
   }
@@ -574,14 +574,77 @@ section.contact {
 }
 
 // MEDIA QUERIES
+@media (min-width: 380px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 14em;
+    }
+  }
+}
+
+@media (min-width: 440px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 16em;
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 18em;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 20em;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 22em;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 24em;
+    }
+  }
+}
+
 @media (min-width: 480px) {
   section {
     padding: 6em 50px;
   }
+
+  //About Media
+  section.about {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(342px) rotateZ(45deg);
+      }
+    }
+  }
 }
 
-//Hero Media
 @media only screen and (min-width: 590px) {
+  //Hero Media
   section.hero {
     .sub_headline_mobile {
       display: none;
@@ -602,6 +665,42 @@ section.contact {
     }
     .btnCtA {
       width: 20%;
+    }
+  }
+
+  //Projects Media
+  section.projects {
+    .projects_left {
+      display: grid;
+      grid-template-columns: 45% auto;
+      gap: 3%;
+    }
+    .carousel {
+      margin-top: 2em;
+    }
+
+    .carouselNav {
+      margin-top: 14em;
+    }
+  }
+
+  section.about {
+    img {
+      height: 80%;
+      object-fit: cover;
+    }
+    .about_container {
+      display: grid;
+      grid-template-columns: 50% auto;
+      gap: 3%;
+    }
+  }
+
+  section.about {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(253px) rotateZ(45deg);
+      }
     }
   }
 }
@@ -634,11 +733,37 @@ section.contact {
   .primary_nav li {
     padding: 0.5em 0.2em;
   }
+
+  section.about {
+    .about_toggle {
+      .switch {
+        width: 80%;
+      }
+      input:checked + .slider::before {
+        transform: translateX(200px) rotateZ(45deg);
+      }
+    }
+  }
 }
 
 @media (min-width: 1080px) {
   section {
     padding: 6em 150px;
+  }
+
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 18em;
+    }
+  }
+
+  section.about {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(278px) rotateZ(45deg);
+      }
+    }
   }
 }
 
@@ -646,11 +771,33 @@ section.contact {
   section {
     padding: 6em 200px;
   }
+
+  section.about {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(318px) rotateZ(45deg);
+      }
+    }
+  }
 }
 
 @media (min-width: 1440px) {
   section {
     padding: 6em 250px;
+  }
+
+  //Projects Media
+  section.projects {
+    .carouselNav {
+      margin-top: 20em;
+    }
+  }
+  section.about {
+    .about_toggle {
+      input:checked + .slider::before {
+        transform: translateX(338px) rotateZ(45deg);
+      }
+    }
   }
 }
 
