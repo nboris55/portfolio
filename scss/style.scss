@@ -77,10 +77,8 @@ h2::before {
   display: none;
 }
 
-@media (max-width: 480px) {
-  section {
-    padding: 6em 25px;
-  }
+section {
+  padding: 6em 25px;
 }
 
 // Navbar
@@ -173,33 +171,6 @@ nav {
   }
 }
 
-// Nav Media
-@media only screen and (min-width: 769px) {
-  nav {
-    padding: 0.5em 2em;
-  }
-  .mobile_nav {
-    display: none;
-  }
-
-  .primary_nav {
-    display: flex;
-  }
-
-  .primary_nav li {
-    padding: 0.5em 1em;
-    font-size: 0.9rem;
-  }
-
-  .blur {
-    filter: none;
-  }
-
-  .primary_nav li {
-    padding: 0.5em 0.2em;
-  }
-}
-
 // Hero
 section.hero {
   margin-top: 7em;
@@ -269,30 +240,6 @@ section.hero {
     font-size: 1.3rem;
     letter-spacing: 0.5px;
     cursor: pointer;
-  }
-
-  //Hero Media
-  @media only screen and (min-width: 590px) {
-    .sub_headline_mobile {
-      display: none;
-    }
-    .sub_headline {
-      display: block;
-      margin-top: 0.5em;
-      opacity: 0.8;
-      font-size: clamp(16px, 6vw, 24px);
-    }
-    .hero_action {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    #cartoon {
-      width: 400px;
-      height: auto;
-    }
-    .btnCtA {
-      width: 20%;
-    }
   }
 }
 // Projects
@@ -410,48 +357,6 @@ section.projects {
   .manual-btn[data-active] {
     background: #fff;
     transition-delay: 250ms;
-  }
-
-  //Projects Media
-  @media only screen and (min-width: 900px) {
-    .projects_left {
-      display: grid;
-      grid-template-columns: 40% auto;
-      grid-column-gap: 50px;
-    }
-
-    .carousel {
-      margin-top: 2em;
-      height: 25vh;
-      object-fit: cover;
-    }
-
-    .carouselNav {
-      margin-top: 18em;
-    }
-  }
-
-  //Projects Media
-  @media only screen and (min-width: 520px) {
-    .carousel {
-      margin-top: 2em;
-      height: 35vh;
-      object-fit: cover;
-    }
-  }
-
-  //Projects Media
-  @media only screen and (min-width: 595px) {
-    .carousel {
-      margin-top: 2em;
-      height: 40vh;
-      object-fit: cover;
-    }
-  }
-  @media only screen and (min-width: 1600px) {
-    .carouselNav {
-      margin-top: 20em;
-    }
   }
 }
 
@@ -666,4 +571,91 @@ section.contact {
   }
 
   // End of contact section
+}
+
+// MEDIA QUERIES
+@media (min-width: 480px) {
+  section {
+    padding: 6em 50px;
+  }
+}
+
+//Hero Media
+@media only screen and (min-width: 590px) {
+  section.hero {
+    .sub_headline_mobile {
+      display: none;
+    }
+    .sub_headline {
+      display: block;
+      margin-top: 0.5em;
+      opacity: 0.8;
+      font-size: clamp(16px, 6vw, 24px);
+    }
+    .hero_action {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #cartoon {
+      width: 400px;
+      height: auto;
+    }
+    .btnCtA {
+      width: 20%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 6em 100px;
+  }
+
+  nav {
+    padding: 0.5em 2em;
+  }
+  .mobile_nav {
+    display: none;
+  }
+
+  .primary_nav {
+    display: flex;
+  }
+
+  .primary_nav li {
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
+  }
+
+  .blur {
+    filter: none;
+  }
+
+  .primary_nav li {
+    padding: 0.5em 0.2em;
+  }
+}
+
+@media (min-width: 1080px) {
+  section {
+    padding: 6em 150px;
+  }
+}
+
+@media (min-width: 1280px) {
+  section {
+    padding: 6em 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  section {
+    padding: 6em 250px;
+  }
+}
+
+@media (min-width: 1600px) {
+  section {
+    padding: 6em 320px;
+  }
 }
