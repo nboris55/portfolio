@@ -27,10 +27,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-section {
-  padding: 4em 2em;
-}
-
 h1,
 h2,
 h3,
@@ -81,22 +77,13 @@ h2::before {
   display: none;
 }
 
-//Section
-@media only screen and (min-width: 1000px) {
+@media (max-width: 480px) {
   section {
-    padding: 6em 10em;
-  }
-}
-
-//Section
-@media only screen and (min-width: 1280px) {
-  section {
-    padding: 8em 20em;
+    padding: 6em 25px;
   }
 }
 
 // Navbar
-
 div.nav_container {
   max-width: 2280px;
   margin: 0 auto;
@@ -522,11 +509,11 @@ section.about {
       width: 100%;
       height: 55px;
       margin-bottom: 1em;
+      cursor: pointer;
     }
 
     .slider {
       position: absolute;
-      cursor: pointer;
       top: 0;
       left: 0;
       right: 0;
@@ -550,7 +537,7 @@ section.about {
     }
 
     input:checked + .slider::before {
-      transform: translateX(310px) rotateZ(45deg);
+      transform: translateX(292px) rotateZ(45deg);
       background: $primary-color;
     }
 
@@ -603,36 +590,6 @@ section.about {
 
     .switch input:checked ~ .labels::before {
       opacity: 1;
-    }
-  }
-
-  @media only screen and (min-width: 900px) {
-    .about_container {
-      display: grid;
-      grid-template-columns: 60% auto;
-    }
-    .about_toggle {
-      .switch {
-        overflow-y: hidden;
-        position: relative;
-        display: block;
-        width: 80%;
-        height: 55px;
-        margin-bottom: 1em;
-      }
-      .switch:hover {
-        cursor: pointer;
-      }
-      input:checked + .slider::before {
-        transform: translateX(380px) rotateZ(45deg);
-      }
-    }
-  }
-  @media only screen and (min-width: 1600px) {
-    .about_toggle {
-      input:checked + .slider::before {
-        transform: translateX(424px) rotateZ(45deg);
-      }
     }
   }
   // End of about section
