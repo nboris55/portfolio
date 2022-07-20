@@ -12,8 +12,12 @@ const carouselButtons = document.querySelectorAll('[data-carousel-button]');
 carouselButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const offset = button.dataset.carouselButton == 'next' ? 1 : -1;
-    const slides = button.closest('[data-carousel]').querySelector('[data-slides]');
-    const radio = button.closest('[data-carousel]').querySelector('[data-radio]');
+    const slides = button
+      .closest('[data-carousel]')
+      .querySelector('[data-slides]');
+    const radio = button
+      .closest('[data-carousel]')
+      .querySelector('[data-radio]');
 
     const activeSlide = slides.querySelector('[data-active]');
     const activeRadio = radio.querySelector('[data-active]');
@@ -98,7 +102,9 @@ const hobbies = document.querySelector('#hobbies');
 
 //Show and hide Facts list vs Hobbies list
 aboutToggle.addEventListener('click', () => {
-  const visibility = document.getElementById('facts').getAttribute('data-visible');
+  const visibility = document
+    .getElementById('facts')
+    .getAttribute('data-visible');
 
   if (visibility === 'false') {
     document.getElementById('facts').setAttribute('data-visible', true);
@@ -123,6 +129,7 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
+  mobileNavToggle.classList.toggle('is-active');
 
   toggleBlur();
 }
@@ -143,6 +150,8 @@ function scrollToProjects() {
   primaryNav.setAttribute('data-visible', false);
   mobileNavToggle.setAttribute('aria-expanded', false);
   mobileNavToggle.classList.toggle('is-active');
+
+  toggleBlur();
 }
 
 // Scrolls to about

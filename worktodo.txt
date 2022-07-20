@@ -1,0 +1,6 @@
+Fix slider circle on various sizes.
+Fix nav circles on various sizes.
+Add blur to navbar. 
+Add blur to mobile open.
+Turn off scroll on mobile open.
+Add GSAP
